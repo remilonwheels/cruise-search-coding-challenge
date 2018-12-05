@@ -41,6 +41,12 @@ h4, h5, h6 {
   color: $primary-color;
   font-family: $font-family-special;
   text-transform: uppercase;
+  transition: all .3s;
+
+  &:hover {
+    background: $primary-color;
+    color: $white;
+  }
 }
 .button--lg {
   padding: 10px 20px;
