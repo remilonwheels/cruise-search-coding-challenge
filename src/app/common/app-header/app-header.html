@@ -1,0 +1,34 @@
+<div class="app-header">
+  <div class="app-header__inner">
+    <div class="app-bar">
+      <h1 class="app-heading" ui-sref="root">CRUISES4U</h1>
+      <div
+        class="nav__hamburger"
+        ng-click="$ctrl.toggleNav($event)"
+        ng-if="$ctrl.isMobile"
+      ></div>
+    </div>
+    <nav ng-if="$ctrl.showNav">
+      <ul>
+        <li ui-sref="cruises" ui-sref-active="active" ng-click="$ctrl.toggleNav($event)">
+          <div class="nav__nav-item-label">
+            <span>Cruises</span>
+          </div>
+          <div class="nav__nav-item-bottom"></div>
+        </li>
+        <li ui-sref="contact" ui-sref-active="active" ng-click="$ctrl.toggleNav($event)">
+          <div class="nav__nav-item-label">
+            <span>Contact Us</span>
+          </div>
+          <div class="nav__nav-item-bottom"></div>
+        </li>
+        <li ng-click="$ctrl.toggleNav($event)">
+          <div class="nav__nav-item-label">
+            <span>Profile</span>
+          </div>
+          <div class="nav__nav-item-bottom"></div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
