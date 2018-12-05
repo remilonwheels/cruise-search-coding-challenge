@@ -1,0 +1,26 @@
+<div class="state-rooms shadow--md">
+  <div class="state-rooms__room-container">
+    <div
+      ng-repeat="room in ::$ctrl.stateRooms"
+      class="state-room"
+    >
+      <span class="state-room__roomName">{{room.idName}}</span>
+      <div class="state-room__button-container">
+        <button
+          ng-click="$ctrl.selectRoom(room.idName)"
+          class="button"
+          ng-class="{'state-room--selected': $ctrl.selectedStateRoom.idName === room.idName}"
+        >{{$ctrl.currencySymbol}}{{room.fare}} *</button>
+      </div>
+    </div>
+  </div>
+  <div class="state-rooms__book-now-container">
+    <button
+      ng-click="$ctrl.handleBookRoomClick()"
+      class="button button--accent button--lg"
+    >Book Now</button>
+  </div>
+  <div class="state-rooms__taxes-fees-container">
+    <a href="#" class="state-rooms__taxes-fees link">*Plus Taxes, Fees, and Port Expenses {{$ctrl.currencySymbol}}{{$ctrl.selectedStateRoom.govtFeesAndTaxes}}</a>
+  </div>
+</div>

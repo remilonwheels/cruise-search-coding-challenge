@@ -1,0 +1,66 @@
+<div class="cruise-tile shadow--md">
+  <h3 class="cruise-tile__heading">{{::$ctrl.itinerary.description}}</h3>
+  <div class="cruise-tile__body">
+    <div class="cruise-tile__body-inner">
+      <div class="cruise-tile__body-top">
+        <div>
+          <img
+            src="{{$ctrl.mapImage}}"
+            alt="Itinerary Map"
+            class="cruise-tile__map-image shadow--md"
+          />
+        </div>
+        <div class="cruise-tile__data-container">
+          <span class="cruise-tile__data">
+            <span class="cruise-tile__data-label">DEPARTURE DATE</span>
+            <span class="cruise-tile__data-value">{{::$ctrl.itinerary.departureDate | date:'dd MMM yyyy'}}</span>
+          </span>
+          <span class="cruise-tile__data">
+            <span class="cruise-tile__data-label">SHIP</span>
+            <span class="cruise-tile__data-value">{{::$ctrl.itinerary.shipName}}</span>
+          </span>
+          <span class="cruise-tile__data">
+            <span class="cruise-tile__data-label">DEPARTS</span>
+            <span class="cruise-tile__data-value">{{::$ctrl.itinerary.disembarkPortName}}</span>
+          </span>
+          <span class="cruise-tile__data">
+            <span class="cruise-tile__data-label">ARRIVES</span>
+            <span class="cruise-tile__data-value">{{::$ctrl.itinerary.embarkPortName}}</span>
+          </span>
+        </div>
+        <div class="cruise-tile__headline">
+          <span>From</span>
+          <span class="cruise-tile__headline-price">{{::$ctrl.itinerary.currencySymbol}}{{$ctrl.selectedStateRoom.fare}}</span>
+          <span>
+            <span>per person</span>
+            <span class="bold">{{::$ctrl.selectedStateRoom.idName}}</span>
+          </span>
+          <div 
+          class="cruise-tile__taxes-fees-container">
+            <a
+              href="#"
+              class="link"
+            >*Plus Taxes, Fees, and Port Expenses {{$ctrl.itinerary.currencySymbol}}{{$ctrl.selectedStateRoom.govtFeesAndTaxes}}</a>
+          </div>
+          <div class="cruise-tile__view-itinerary-container">
+            <button
+              ng-click="$ctrl.handleViewItineraryClick()"
+              class="button button--lg"
+            >View Itinerary</button>
+          </div>
+        </div>
+      </div>
+      <state-rooms
+        itinerary="::$ctrl.itinerary"
+        state-rooms="::$ctrl.itinerary.stateRooms"
+        currency-symbol="::$ctrl.itinerary.currencySymbol"
+      ></state-rooms>
+      <div class="cruise-tile__terms-conditions-container">
+        <span class="cruise-tile__terms-conditions">
+          *The deposit on this cruise is fully non-refundable. Fares shown are in {{::$ctrl.itinerary.currencySymbol}}, per person ,based on double occupancy. Fares reflect best fare available for a stateroom in each category, on one date that this itinerary is available from a snapshot taken in the last 24 hours.
+        </span>
+        <a href="#" class="link">View Pricing Terms.</a>
+      </div>
+    </div>
+  </div>
+</div>

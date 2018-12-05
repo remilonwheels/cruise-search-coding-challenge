@@ -1,0 +1,99 @@
+@import '~scss/colors';
+@import '~scss/fonts';
+@import '~scss/layout';
+@import '~scss/responsive';
+
+.app-header {
+  height: $header-height;
+  background: #2B386F;
+  color: #FFFFFF;
+
+  .app-header__inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    margin: 0 $app-side-gutter;
+
+    @include mobile {
+      grid-template-columns: auto;
+      grid-template-rows: $header-height auto;
+      margin: 0;
+    }
+  }
+
+  .app-bar {
+    @include mobile {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .app-heading {
+    font-family: $font-family-special;
+    
+    @include mobile {
+      padding-left: $app-side-gutter-mobile;
+    }
+  }
+
+  .nav__hamburger {
+    height: 20px;
+    width: 20px;
+    background: $white;
+    margin-right: $app-side-gutter-mobile;
+  }
+  nav {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 20%);
+      grid-column-gap: 15px;
+      margin: 0;
+      justify-content: end;
+      padding-inline-start: 0;
+
+      @include mobile {
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 100%;
+      }
+    }
+    li {
+      height: $header-height;
+      display: grid;
+      grid-template-rows: 1fr 4px;
+      grid-template-columns: auto;
+      list-style-type: none;
+      font-family: $font-family-special;
+      text-transform: uppercase;
+
+      &.active {
+        background: $white;
+        color: $primary-color;
+      }
+
+      @include mobile {
+        z-index: 100;
+        background: $primary-color;
+      }
+    }
+    .nav__nav-item-label {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      display: grid;
+      align-items: center;
+      justify-items: right;
+      > span {
+        padding-right: 10px;
+      }
+    }
+    .nav__nav-item-bottom {
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      background: $accent-color;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<div class="page cruise">
+  <div class="page-inner">
+    <div
+      ng-if="$ctrl.bookRoom.idName"
+      class="cruise__booked-room-container"
+    >
+      <span>You booked the {{$ctrl.bookRoom.idName}} for</span>
+      <span>{{$ctrl.bookRoom.fare}} + {{$ctrl.bookRoom.govtFeesAndTaxes}} in taxes & fees!</span>
+    </div>
+    <h2>{{$ctrl.cruise.description}}</h2>
+    <div ng-repeat="port in ::$ctrl.cruise.portsOfCall">
+      <span>{{port.arrivalDate | date:'MMM dd'}}</span>
+      <span>{{port.portName}}</span>
+    </div>
+  </div>
+</div>

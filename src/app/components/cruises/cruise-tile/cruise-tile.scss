@@ -1,0 +1,62 @@
+@import '~scss/colors';
+@import '~scss/fonts';
+
+.cruise-tile {
+  .cruise-tile__heading {
+    background: $primary-color;
+    color: $white;
+    font-family: $font-family-special;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 10px;
+  }
+  .cruise-tile__body {}
+  .cruise-tile__body-inner {
+    padding: 10px;
+  }
+  .cruise-tile__body-top {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    margin-bottom: 20px;
+  }
+  .cruise-tile__map-image {}
+  .cruise-tile__data-container {
+
+  }
+  .cruise-tile__data {
+    display: block;
+    margin: 10px 10px;
+  }
+  .cruise-tile__data-label {
+    font-family: $font-family-special;
+  }
+  .cruise-tile__data-value {
+    display: block
+  }
+  .cruise-tile__headline {
+    text-align: center;
+    > span {
+      display: block;
+      margin: 2px 10px;
+    }
+  }
+  .cruise-tile__headline-price {
+    font-size: 28px;
+    color: $primary-color;
+    font-weight: 600;
+  }
+  .cruise-tile__taxes-fees-container {
+    margin-top: 10px;
+  }
+  .cruise-tile__view-itinerary-container {
+    margin: 20px 0;
+  }
+  .cruise-tile__terms-conditions-container {
+    margin-top: 15px;
+    line-height: .75;
+  }
+  .cruise-tile__terms-conditions {
+    font-size: 10px;
+  }
+}
+
