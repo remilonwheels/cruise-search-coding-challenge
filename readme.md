@@ -5,7 +5,7 @@ it's an angularJS component based app bundled by webpack
 
 **run it locally:**
 - install dependecies with `npm install`
-- run `npm start`
+- run `npm start` and the app will be availble at `http://localhost:8080`
 
 *NOTE: because of a CORS issue with the API, please disable CORS on the browser you are using, if you're on a Mac, you can run this command from the command line to run a cors disabled version of `chrome` [[link to run chrome disable chrome]](https://medium.com/@siddhartha.ng/disable-cross-origin-on-chrome-for-localhost-c644b131db19)
 ```
