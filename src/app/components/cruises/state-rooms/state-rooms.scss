@@ -1,5 +1,6 @@
 @import '~scss/colors';
 @import '~scss/fonts';
+@import '~scss/responsive';
 
 .state-rooms {
   background: $primary-color-light;
@@ -15,6 +16,11 @@
     grid-template-columns: auto auto auto auto auto auto auto auto;
     grid-column-gap: 10px;
     justify-content: center;
+
+    @include mobile {
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto;
+    }
   }
 
   .state-rooms__book-now-container {
@@ -35,6 +41,10 @@
     display: block;
     text-align: center;
     margin-bottom: 5px;
+
+    @include mobile {
+      margin-top: 10px;
+    }
   }
 
   .state-room__button-container {

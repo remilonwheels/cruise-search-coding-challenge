@@ -1,5 +1,6 @@
 @import '~scss/colors';
 @import '~scss/fonts';
+@import '~scss/responsive';
 
 .cruise-tile {
   .cruise-tile__heading {
@@ -18,10 +19,24 @@
     display: grid;
     grid-template-columns: auto 1fr 1fr;
     margin-bottom: 20px;
-  }
-  .cruise-tile__map-image {}
-  .cruise-tile__data-container {
 
+    @include mobile {
+      display: block;
+    }
+  }
+  .cruise-tile__map-image-container {}
+  .cruise-tile__map-image {
+    @include mobile {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .cruise-tile__data-container {
+    @include mobile {
+      display: grid;
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr 1fr;
+    }
   }
   .cruise-tile__data {
     display: block;
