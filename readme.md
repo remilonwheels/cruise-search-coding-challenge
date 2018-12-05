@@ -3,9 +3,17 @@
 ## setup
 it's an angularJS component based app bundled by webpack
 
-**run it locally:** `npm start`
+**run it locally:**
+- install dependecies with `npm install`
+- run `npm start`
 
-**production build files:** `npm run build` will output to the `/dist` directory
+*NOTE: because of a CORS issue with the API, please disable CORS on the browser you are using, if you're on a Mac, you can run this command from the command line to run a cors disabled version of `chrome` [[link to run chrome disable chrome]](https://medium.com/@siddhartha.ng/disable-cross-origin-on-chrome-for-localhost-c644b131db19)
+```
+/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary -disable-web-security -allow-file-access-from-files -allow-file-access
+```
+
+**production build files:**
+- run `npm run build` and the files will be outputted to the `/dist` directory
 
 ## app
 [index.js](https://github.com/remilonwheels/cruise-search-coding-challenge/blob/coding-challenge-remil/src/index.js) bootstap the app to the document
