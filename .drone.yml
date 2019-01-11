@@ -1,0 +1,10 @@
+kind: pipeline
+name: default
+
+steps:
+- name: frontend
+  image: node
+  commands:
+  - echo yoo
+  - npm install
+  - npm run build
